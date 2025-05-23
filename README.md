@@ -15,7 +15,7 @@ This project leverages **Transformer-based models** (BERT) to predict the presen
 
 * Python
 * BERT (Transformer-based NLP model)
-* Flask / FastAPI (API backend)
+* Django (backend)
 * HTML, CSS, JavaScript (Frontend)
 * Pandas, NumPy, Scikit-learn (Data processing)
 * Matplotlib / Seaborn (Optional: Visualization)
@@ -27,21 +27,6 @@ This project leverages **Transformer-based models** (BERT) to predict the presen
 3. The **BERT model** processes inputs and returns prediction: *CKD Positive* or *Negative*.
 4. Interface displays results and provides awareness resources.
 
-### 📁 Project Structure
-
-```
-├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   ├── script.js
-├── backend/
-│   ├── app.py
-│   ├── model/
-│   │   └── bert_ckd_model.pkl
-├── static/
-│   └── video.mp4
-├── README.md
-```
 
 ### 🙌 Future Enhancements
 
