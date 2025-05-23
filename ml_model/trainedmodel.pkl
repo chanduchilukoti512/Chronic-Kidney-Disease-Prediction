@@ -1,0 +1,10 @@
+from sklearn.ensemble import RandomForestClassifier
+import pickle
+
+# Train your model
+model = RandomForestClassifier()
+model.fit(X_train, y_train)
+
+# Save model
+with open("trained_model.pkl", "wb") as f:
+    pickle.dump(model, f)

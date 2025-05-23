@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What People Are Saying</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 40px 10%;
+        }
+
+        .feedback-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .feedback-section h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .feedback-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .feedback-card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 350px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feedback-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .feedback-text {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .feedback-author {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 40px 5%;
+            }
+
+            .feedback-section h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-section">
+        <h1>What People Are Saying</h1>
+        <div class="feedback-container">
+            <!-- Feedback Cards -->
+            <div class="feedback-card">
+                <p class="feedback-text">"This prediction system helped me a lot in understanding my kidney health. I was able to seek medical help earlier!"</p>
+                <p class="feedback-author">- John D.</p>
+            </div>
+            <div class="feedback-card">
+                <p class="feedback-text">"Very accurate and easy to use. I feel more confident about managing my health now!"</p>
+                <p class="feedback-author">- Sarah T.</p>
+            </div>
+            <div class="feedback-card">
+                <p class="feedback-text">"I was impressed by the user-friendly interface and quick results. Great tool for early diagnosis!"</p>
+                <p class="feedback-author">- Michael H.</p>
+            </div>
+            <div class="feedback-card">
+                <p class="feedback-text">"The results are clear, and the suggestions for prevention are really helpful. Highly recommend it!"</p>
+                <p class="feedback-author">- Emily R.</p>
+            </div>
+            <div class="feedback-card">
+                <p class="feedback-text">"Amazing service. It helped me understand my health in a way no other tool has. Very satisfied!"</p>
+                <p class="feedback-author">- Chris L.</p>
+            </div>
+            <div class="feedback-card">
+                <p class="feedback-text">"The predictions were accurate and aligned with my health history. Very thankful for this tool!"</p>
+                <p class="feedback-author">- Olivia K.</p>
+            </div>
+            <!-- New Additional Feedbacks -->
+            <div class="feedback-card">
+                <p class="feedback-text">"The user interface was intuitive, and I found the information quite reliable. Worth using!"</p>
+                <p class="feedback-author">- James W.</p>
+            </div>
+            <div class="feedback-card">
+                <p class="feedback-text">"I appreciate how quickly I could get results. It made me more aware of my health risks!"</p>
+                <p class="feedback-author">- Mia P.</p>
+            </div>
+            <div class="feedback-card">
+                <p class="feedback-text">"A wonderful tool for anyone concerned about their kidney health. I was able to make an informed decision!"</p>
+                <p class="feedback-author">- Jack F.</p>
+            </div>
+            <div class="feedback-card">
+                <p class="feedback-text">"I love the detail provided. This is more than just a prediction; it's a guide to better health!"</p>
+                <p class="feedback-author">- Ava B.</p>
+            </div>
+            <!-- New Interactive Feedback -->
+            <div class="feedback-card">
+                <p class="feedback-text">"The system was accurate and easy to understand. It empowered me to take charge of my health!"</p>
+                <p class="feedback-author">- Daniel S.</p>
+            </div>
+            <div class="feedback-card">
+                <p class="feedback-text">"Quick results and easy-to-follow health advice. It’s a must-try tool for everyone!"</p>
+                <p class="feedback-author">- Karen P.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

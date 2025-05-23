@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Surrounding container with a background gradient -->
+<div class="container my-5" style="background: #edd287; padding: 30px; border-radius: 20px;">
+    <!-- Attractive Heading -->
+    <h1 class="text-center mb-4" style="
+        font-family: 'Poppins', sans-serif; 
+        font-size: 2.5rem; 
+        font-weight: 700; 
+        color: #007BFF; 
+        background: linear-gradient(to right, #007BFF, #00AAFF); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    ">
+        CKD Prediction Form
+    </h1>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <!-- Stylish Form Card -->
+            <div style="
+                background: linear-gradient(to right, #f9f9f9, #f1f4ff); /* Calm pastel gradient */
+                border-radius: 15px; 
+                padding: 20px; 
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            ">
+                <form method="POST" action="{% url 'predict' %}">
+                    {% csrf_token %}
+                    
+                    <!-- Age -->
+                    <div class="mb-4">
+                        <label for="age" class="form-label" style="font-weight: 600; font-size: 1.1rem;">Age:</label>
+                        <input type="number" name="age" id="age" class="form-control form-control-lg shadow-sm border-primary" placeholder="Enter your age" required>
+                    </div>
+
+                    <!-- Blood Pressure (mmHg) -->
+                    <div class="mb-4">
+                        <label for="bp" class="form-label" style="font-weight: 600; font-size: 1.1rem;">Blood Pressure (mmHg):</label>
+                        <input type="number" name="bp" id="bp" class="form-control form-control-lg shadow-sm border-primary" placeholder="e.g., 120" required>
+                    </div>
+
+                    <!-- Albumin -->
+                    <div class="mb-4">
+                        <label for="albumin" class="form-label" style="font-weight: 600; font-size: 1.1rem;">Albumin:</label>
+                        <input type="number" name="albumin" id="albumin" class="form-control form-control-lg shadow-sm border-primary" placeholder="e.g., 4" required>
+                    </div>
+
+                    <!-- Sugar -->
+                    <div class="mb-4">
+                        <label for="sugar" class="form-label" style="font-weight: 600; font-size: 1.1rem;">Sugar:</label>
+                        <input type="number" name="sugar" id="sugar" class="form-control form-control-lg shadow-sm border-primary" placeholder="e.g., 5" required>
+                    </div>
+
+                    <!-- Red Blood Cell Count -->
+                    <div class="mb-4">
+                        <label for="rbcc" class="form-label" style="font-weight: 600; font-size: 1.1rem;">Red Blood Cell Count:</label>
+                        <input type="number" step="0.01" name="rbcc" id="rbcc" class="form-control form-control-lg shadow-sm border-primary" placeholder="e.g., 4.5" required>
+                    </div>
+
+                    <!-- Bacteria -->
+                    <div class="mb-4">
+                        <label for="bacteria" class="form-label" style="font-weight: 600; font-size: 1.1rem;">Bacteria:</label>
+                        <select name="bacteria" id="bacteria" class="form-select form-select-lg shadow-sm border-primary" required>
+                            <option value="" disabled selected>Choose an option</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+                    <!-- Blood Glucose Random -->
+                    <div class="mb-4">
+                        <label for="bgr" class="form-label" style="font-weight: 600; font-size: 1.1rem;">Blood Glucose Random (mg/dL):</label>
+                        <input type="number" step="0.01" name="bgr" id="bgr" class="form-control form-control-lg shadow-sm border-primary" placeholder="e.g., 140" required>
+                    </div>
+
+                    <!-- Haemoglobin -->
+                    <div class="mb-4">
+                        <label for="haemoglobin" class="form-label" style="font-weight: 600; font-size: 1.1rem;">Haemoglobin (g/dL):</label>
+                        <input type="number" step="0.01" name="haemoglobin" id="haemoglobin" class="form-control form-control-lg shadow-sm border-primary" placeholder="e.g., 13.5" required>
+                    </div>
+
+                    <!-- Hypertension -->
+                    <div class="mb-4">
+                        <label for="hypertension" class="form-label" style="font-weight: 600; font-size: 1.1rem;">Hypertension:</label>
+                        <select name="hypertension" id="hypertension" class="form-select form-select-lg shadow-sm border-primary" required>
+                            <option value="" disabled selected>Choose an option</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+                    <!-- Coronary Artery Disease -->
+                    <div class="mb-4">
+                        <label for="cad" class="form-label" style="font-weight: 600; font-size: 1.1rem;">Coronary Artery Disease:</label>
+                        <select name="cad" id="cad" class="form-select form-select-lg shadow-sm border-primary" required>
+                            <option value="" disabled selected>Choose an option</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+                    <!-- Appetite -->
+                    <div class="mb-4">
+                        <label for="appetite" class="form-label" style="font-weight: 600; font-size: 1.1rem;">Appetite:</label>
+                        <select name="appetite" id="appetite" class="form-select form-select-lg shadow-sm border-primary" required>
+                            <option value="" disabled selected>Choose an option</option>
+                            <option value="Good">Good</option>
+                            <option value="Poor">Poor</option>
+                        </select>
+                    </div>
+                     
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary w-100 shadow-lg" style="background: linear-gradient(to right, #007BFF, #00AAFF); border-radius: 25px; font-size: 1.2rem; padding: 12px 0; border: none; transition: transform 0.3s ease-in-out;">
+                            <span style="font-weight: 600;">Predict</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

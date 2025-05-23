@@ -1,0 +1,6 @@
+django==4.2
+pandas
+numpy
+scikit-learn
+pickle
+python 

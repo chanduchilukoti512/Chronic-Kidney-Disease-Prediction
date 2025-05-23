@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chronic Kidney Disease Prediction</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background-color: #2C3E50;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    /* Positioning the Back to Home button */
+    .cta-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #1ABC9C;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1.2em;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #16A085;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #34495E;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+    nav a:hover {
+      background-color: #1ABC9C;
+    }
+    section {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    section h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #2C3E50;
+    }
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .content div {
+      width: 48%;
+      margin-bottom: 20px;
+    }
+    .content div img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .content div h3 {
+      font-size: 1.5em;
+      color: #2980B9;
+    }
+    .content div p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #7F8C8D;
+    }
+    /* Highlighting the questions */
+    h3 {
+      font-weight: bold;
+      color: #E74C3C; /* Red color for emphasis */
+    }
+    footer {
+      background-color: #34495E;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    footer p {
+      font-size: 1.2em;
+    }
+    @media (max-width: 768px) {
+      .content div {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Chronic Kidney Disease Prediction</h1>
+    <p>Helping doctors detect early stages of kidney disease using Machine Learning</p>
+    <!-- Back to Home button placed here -->
+    <a href="{% url 'mainpage' %}" class="cta-button">Back to Home Page</a>
+  </header>
+
+  <section>
+    <h2>What is Chronic Kidney Disease?</h2>
+    <div class="content">
+      <div>
+        <h3>Introduction</h3>
+        <p>Chronic Kidney Disease (CKD) refers to the gradual loss of kidney function over time. The kidneys play a vital role in filtering waste from the blood, and when they fail, it can lead to serious health complications such as hypertension, heart disease, and stroke.</p>
+      </div>
+      <div>
+        <h3>Why Predict CKD?</h3>
+        <p>Early detection of CKD can help in reducing the risk of kidney failure by managing the disease in its early stages. This prediction system aims to assist healthcare providers by predicting the risk of kidney failure in patients, ensuring timely interventions and better patient outcomes.</p>
+      </div>
+    </div>
+
+    <h2>Our Prediction Model</h2>
+    <div class="content">
+      <div>
+        <h3>How Does It Work?</h3>
+        <p>Our prediction model uses machine learning algorithms that analyze a variety of clinical factors, such as age, blood pressure, body mass index (BMI), and urine test results, to assess the likelihood of CKD in patients. With a user-friendly interface, medical professionals can easily input patient data and receive quick predictions.</p>
+      </div>
+      <div>
+        <h3>Model Accuracy</h3>
+        <p>Our model is trained on a dataset with over 100,000 patient records and provides predictions with over 90% accuracy, making it a reliable tool for detecting kidney disease early. The model is regularly updated to improve its predictive capabilities, ensuring high-quality, accurate predictions for every patient.</p>
+      </div>
+    </div>
+
+    <h2>Benefits of Early Detection</h2>
+    <div class="content">
+      <div>
+        <h3>Prevention of Kidney Failure</h3>
+        <p>Early identification of CKD allows for timely medical interventions, including medication and lifestyle changes. This proactive approach prevents the progression to kidney failure, which is often costly and life-threatening.</p>
+      </div>
+      <div>
+        <h3>Better Treatment Outcomes</h3>
+        <p>Timely diagnosis of CKD allows for appropriate interventions, lifestyle changes, and medications that can slow down the disease progression, ultimately leading to better treatment outcomes. Patients who are diagnosed early are more likely to live longer, healthier lives with a lower risk of complications.</p>
+      </div>
+    </div>
+
+    <h2>How to Use the Prediction System?</h2>
+    <div class="content">
+      <div>
+        <h3>Step-by-Step Guide</h3>
+        <p>To use our Chronic Kidney Disease prediction system, follow these simple steps:</p>
+        <ul>
+          <li>Step 1: Enter patient information (e.g., age, blood pressure, BMI, etc.).</li>
+          <li>Step 2: Click the "Predict" button to calculate the likelihood of CKD.</li>
+          <li>Step 3: Review the prediction results and consult with a healthcare provider for further diagnosis and treatment.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Why Choose Our Tool?</h3>
+        <p>Our system is designed to provide quick and reliable results, offering healthcare providers an easy-to-use tool for CKD detection. With over 90% accuracy, it helps reduce diagnostic time, giving medical professionals more time to focus on treatment and patient care.</p>
+      </div>
+    </div>
+  </section>
+
+  
+
+</body>
+</html>

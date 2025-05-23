@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background: url("{% static 'css/kidney1.jpg' %}") no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+  }
+
+  /* Header Section */
+  .header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 111, 97, 0.9);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+
+  .header p {
+    font-size: 1.4em;
+  }
+
+  /* Timeline Section */
+  .timeline {
+    position: relative;
+    padding: 20px 0;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: #ff6f61;
+    transform: translateX(-50%);
+    border-radius: 10px;
+  }
+
+  .timeline-event {
+    position: relative;
+    margin: 30px 0;
+    width: 40%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .timeline-event:nth-child(odd) {
+    left: 10%;
+  }
+
+  .timeline-event:nth-child(even) {
+    left: 50%;
+  }
+
+  .timeline-event:hover {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+
+  .timeline-event-content {
+    position: relative;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .timeline-event-content:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .timeline-event:nth-child(odd) .timeline-event-content {
+    margin-left: 20px;
+  }
+
+  .timeline-event:nth-child(even) .timeline-event-content {
+    margin-right: 30px;
+  }
+
+  .timeline-event::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background: #ff9671;
+    border: 4px solid white;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .timeline-event h3 {
+    font-size: 1.6em;
+    color: #ff6f61;
+    margin-bottom: 8px;
+  }
+
+  .timeline-event p {
+    font-size: 1em;
+    color: #555;
+  }
+
+  /* Icon Styling */
+  .icon {
+    font-size: 2.5em;
+    color: #ff9671;
+    margin-bottom: 10px;
+  }
+
+  /* Footer Section */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 111, 97, 0.9);
+    color: white;
+    border-radius: 10px;
+    margin-top: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
+<header class="header">
+  <h1>Chronic Kidney Disease Symptoms</h1>
+  <p>Explore the key symptoms interactively with vibrant visuals.</p>
+</header>
+
+<section class="timeline">
+  <div class="timeline-event">
+    <div class="timeline-event-content">
+      <div class="icon">💤</div>
+      <h3>Fatigue</h3>
+      <p>Unusual tiredness or weakness due to decreased kidney function.</p>
+    </div>
+  </div>
+
+  <div class="timeline-event">
+    <div class="timeline-event-content">
+      <div class="icon">🦶</div>
+      <h3>Swelling</h3>
+      <p>Fluid retention causes swelling in the legs, ankles, or feet.</p>
+    </div>
+  </div>
+
+  <div class="timeline-event">
+    <div class="timeline-event-content">
+      <div class="icon">🚻</div>
+      <h3>Frequent Urination</h3>
+      <p>Increased need to urinate, especially during nighttime.</p>
+    </div>
+  </div>
+
+  <div class="timeline-event">
+    <div class="timeline-event-content">
+      <div class="icon">🌬️</div>
+      <h3>Shortness of Breath</h3>
+      <p>Difficulty breathing due to fluid buildup in the lungs.</p>
+    </div>
+  </div>
+
+  <div class="timeline-event">
+    <div class="timeline-event-content">
+      <div class="icon">🍴</div>
+      <h3>Loss of Appetite</h3>
+      <p>Reduced interest in eating, often accompanied by nausea.</p>
+    </div>
+  </div>
+
+  <div class="timeline-event">
+    <div class="timeline-event-content">
+      <div class="icon">🌵</div>
+      <h3>Dry, Itchy Skin</h3>
+      <p>Caused by imbalances in minerals and nutrients.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Always consult a healthcare professional for accurate diagnosis and advice.</p>
+</footer>
+{% endblock %}

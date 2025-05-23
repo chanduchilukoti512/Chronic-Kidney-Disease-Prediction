@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <a href="{% url 'home' %}" class="cta-button">Back</a>
+
+    <div class="container">
+        <div class="form-container">
+            <!-- Register Form -->
+            <div class="form-section register-section active">
+                <h2>REGISTER</h2>
+                
+                <form class="register-form" method="POST" action="{% url 'register' %}">
+                    {% csrf_token %}
+                    
+                    {% if messages %}
+                    <div class="messages">
+                        {% for message in messages %}
+                            <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <div class="input-group">
+                        <input type="text" name="username" required>
+                        <span>Username</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="password" required>
+                        <span>Password</span>
+                    </div>
+
+                    <div class="links">
+                        <a href="{% url 'login' %}">Already have an account?</a>
+                    </div>
+
+                    <button type="submit">Register</button>
+                </form>                
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <a href="{% url 'home' %}" class="cta-button">Back</a>
+
+    <div class="container">
+        <div class="form-container">
+            <!-- Login Form -->
+            <div class="form-section login-section active">
+                <h2>LOGIN</h2>
+                {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                        <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                
+                <form method="POST" action="{% url 'prediction' %}">
+                    {% csrf_token %}
+                    
+                    <div class="input-group">
+                        <input type="email" name="email" required>
+                        <span>Email</span>
+                        <i></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="password" required>
+                        <span>Password</span>
+                        <i></i>
+                    </div>
+                    
+                    <div class="links">
+                        <a href="#">Forgot Password?</a>
+                        <a href="{% url 'register' %}">Register</a>
+                    </div>
+                    
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

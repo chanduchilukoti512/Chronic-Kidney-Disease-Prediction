@@ -1,0 +1,29 @@
+chronic_kidney_disease/       # Root directory
+├── CKD_Prediction/           # Django project folder
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py           # Project settings
+│   ├── urls.py               # Project-level URLs
+│   ├── wsgi.py
+├── manage.py                 # Django management script
+├── prediction_app/           # App folder
+│   ├── migrations/           # Database migrations
+│   ├── static/               # Static files (CSS, JS, etc.)
+│   ├── templates/            # HTML templates
+│   │   ├── base.html
+│   │   ├── home.html
+│   │   ├── result.html
+         - 
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py             # Database models
+│   ├── tests.py
+│   ├── urls.py               # App-level URLs
+│   ├── views.py              # App views (logic)
+├── dataset/                  # Folder for your CKD dataset
+│   ├── chronic_kidney_disease.csv
+├── ml_model/                 # Folder for ML model
+│   ├── trained_model.pkl     # Saved ML model
+│   ├── model_training.ipynb  # Model training code (optional)
+└── requirements.txt          # Python dependencies
